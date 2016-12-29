@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_dormitory_domain_Inform" items="${informs}" z="EcreHtSArK06qZrWB8lVxWvRRms=">
+        <table:table data="${informs}" id="l_com_dormitory_domain_Inform" path="/informs" z="VxHvwV3lWYCvmdx/IIY/X25N1NY=">
+            <table:column id="c_com_dormitory_domain_Inform_name" property="name" z="yZrNzw07/xFa4/BsHnWOpQksL7A="/>
+            <table:column id="c_com_dormitory_domain_Inform_phone" property="phone" z="4s8Qgz4kn7alTQP6oqPJ43ksXoI="/>
+            <table:column id="c_com_dormitory_domain_Inform_type" property="type" z="OOLuEl+CiR0ERZCUf2sNGZPXLTw="/>
+            <table:column id="c_com_dormitory_domain_Inform_amount" property="amount" z="mMeQTys9ya6xB4b5KhObkLYCxKM="/>
+            <table:column id="c_com_dormitory_domain_Inform_color" property="color" z="BP/+46Kawmd7MfbRvm3konbtXa0="/>
+            <table:column id="c_com_dormitory_domain_Inform_feature" property="feature" z="dpbnqqLCPbvXd509yIb47Mqr5KE="/>
+        </table:table>
+    </page:list>
+</div>

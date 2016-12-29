@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_dormitory_domain_Inform" modelAttribute="inform" path="/informs" render="${empty dependencies}" z="XyGfpqielKpGE3QPjCgBb0VNMJo=">
+        <field:select field="name" id="c_com_dormitory_domain_Inform_name" itemValue="id" items="${customers}" path="/customers" z="fapRvxmfmciEUtZltWBl29yVaAQ="/>
+        <field:input field="phone" id="c_com_dormitory_domain_Inform_phone" min="2" required="true" z="nBWCzPBX47+pRogR1owQd1nSPwA="/>
+        <field:select field="type" id="c_com_dormitory_domain_Inform_type" itemValue="id" items="${types}" path="/types" z="nRM4jSfrpL6l0DwOwYHOUqNfEvY="/>
+        <field:input field="amount" id="c_com_dormitory_domain_Inform_amount" validationMessageCode="field_invalid_number" z="HZFrxizdA00/iUBqBBuU3PWD5gU="/>
+        <field:select field="color" id="c_com_dormitory_domain_Inform_color" itemValue="id" items="${colors}" path="/colors" z="MGVI5uJkPvXxOJkkLOwesSVMEwY="/>
+        <field:input field="feature" id="c_com_dormitory_domain_Inform_feature" min="2" required="true" z="GsCYM/D3jij9KH+Q5F1Su75areo="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_dormitory_domain_Inform" render="${not empty dependencies}" z="6uN2hXmqswRgalTWdB+u4fXZ/ik="/>
+</div>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByTypeAndColor" id="ff_com_dormitory_domain_Inform" path="/informs" z="2+bytgin47dA6KWhbYAYjm1YMBI=">
+        <field:select disableFormBinding="true" field="type" id="f_com_dormitory_domain_Inform_type" itemValue="id" items="${types}" path="/types" required="true" z="4r0psK78s9wENb30YfRbqDjivnc="/>
+        <field:select disableFormBinding="true" field="color" id="f_com_dormitory_domain_Inform_color" itemValue="id" items="${colors}" path="/colors" required="true" z="jmSxVwXNgwdf8yTdkDJ3qI+XZQQ="/>
+    </form:find>
+</div>

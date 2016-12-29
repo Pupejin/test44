@@ -4,8 +4,10 @@
 package com.dormitory.web;
 
 import com.domitory.domain.Maintenances;
+import com.dormitory.domain.Color;
 import com.dormitory.domain.Customer;
 import com.dormitory.domain.DurableArticles;
+import com.dormitory.domain.Inform;
 import com.dormitory.domain.LeaseAgreement;
 import com.dormitory.domain.Maintenance;
 import com.dormitory.domain.Payment;
@@ -13,6 +15,7 @@ import com.dormitory.domain.RentDurableArticles;
 import com.dormitory.domain.Reservation;
 import com.dormitory.domain.Room;
 import com.dormitory.domain.Roomtype;
+import com.dormitory.domain.Type;
 import com.dormitory.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.core.convert.converter.Converter;
@@ -42,6 +45,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.domitory.domain.Maintenances>() {
             public com.domitory.domain.Maintenances convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), Maintenances.class);
+            }
+        };
+    }
+    
+    public Converter<Color, String> ApplicationConversionServiceFactoryBean.getColorToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.Color, java.lang.String>() {
+            public String convert(Color color) {
+                return new StringBuilder().append(color.getName()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Color> ApplicationConversionServiceFactoryBean.getIdToColorConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.Color>() {
+            public com.dormitory.domain.Color convert(java.lang.Long id) {
+                return Color.findColor(id);
+            }
+        };
+    }
+    
+    public Converter<String, Color> ApplicationConversionServiceFactoryBean.getStringToColorConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.Color>() {
+            public com.dormitory.domain.Color convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Color.class);
             }
         };
     }
@@ -90,6 +117,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.DurableArticles>() {
             public com.dormitory.domain.DurableArticles convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), DurableArticles.class);
+            }
+        };
+    }
+    
+    public Converter<Inform, String> ApplicationConversionServiceFactoryBean.getInformToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.Inform, java.lang.String>() {
+            public String convert(Inform inform) {
+                return new StringBuilder().append(inform.getPhone()).append(' ').append(inform.getAmount()).append(' ').append(inform.getFeature()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Inform> ApplicationConversionServiceFactoryBean.getIdToInformConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.Inform>() {
+            public com.dormitory.domain.Inform convert(java.lang.Long id) {
+                return Inform.findInform(id);
+            }
+        };
+    }
+    
+    public Converter<String, Inform> ApplicationConversionServiceFactoryBean.getStringToInformConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.Inform>() {
+            public com.dormitory.domain.Inform convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Inform.class);
             }
         };
     }
@@ -262,16 +313,46 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Type, String> ApplicationConversionServiceFactoryBean.getTypeToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.Type, java.lang.String>() {
+            public String convert(Type type) {
+                return new StringBuilder().append(type.getName()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Type> ApplicationConversionServiceFactoryBean.getIdToTypeConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.Type>() {
+            public com.dormitory.domain.Type convert(java.lang.Long id) {
+                return Type.findType(id);
+            }
+        };
+    }
+    
+    public Converter<String, Type> ApplicationConversionServiceFactoryBean.getStringToTypeConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.Type>() {
+            public com.dormitory.domain.Type convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Type.class);
+            }
+        };
+    }
+    
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
         registry.addConverter(getMaintenancesToStringConverter());
         registry.addConverter(getIdToMaintenancesConverter());
         registry.addConverter(getStringToMaintenancesConverter());
+        registry.addConverter(getColorToStringConverter());
+        registry.addConverter(getIdToColorConverter());
+        registry.addConverter(getStringToColorConverter());
         registry.addConverter(getCustomerToStringConverter());
         registry.addConverter(getIdToCustomerConverter());
         registry.addConverter(getStringToCustomerConverter());
         registry.addConverter(getDurableArticlesToStringConverter());
         registry.addConverter(getIdToDurableArticlesConverter());
         registry.addConverter(getStringToDurableArticlesConverter());
+        registry.addConverter(getInformToStringConverter());
+        registry.addConverter(getIdToInformConverter());
+        registry.addConverter(getStringToInformConverter());
         registry.addConverter(getLeaseAgreementToStringConverter());
         registry.addConverter(getIdToLeaseAgreementConverter());
         registry.addConverter(getStringToLeaseAgreementConverter());
@@ -293,6 +374,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getRoomtypeToStringConverter());
         registry.addConverter(getIdToRoomtypeConverter());
         registry.addConverter(getStringToRoomtypeConverter());
+        registry.addConverter(getTypeToStringConverter());
+        registry.addConverter(getIdToTypeConverter());
+        registry.addConverter(getStringToTypeConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {

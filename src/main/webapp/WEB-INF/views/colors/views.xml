@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="colors/list">
+        <put-attribute name="body" value="/WEB-INF/views/colors/list.jspx"/>
+    </definition>
+<definition extends="default" name="colors/show">
+        <put-attribute name="body" value="/WEB-INF/views/colors/show.jspx"/>
+    </definition>
+<definition extends="default" name="colors/create">
+        <put-attribute name="body" value="/WEB-INF/views/colors/create.jspx"/>
+    </definition>
+<definition extends="default" name="colors/update">
+        <put-attribute name="body" value="/WEB-INF/views/colors/update.jspx"/>
+    </definition>
+</tiles-definitions>
