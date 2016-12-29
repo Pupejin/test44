@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_dormitory_domain_LeaseAgreement" object="${leaseagreement}" path="/leaseagreements" z="JfQRZIa5JOUliLvlqwZysodhMl4=">
+        <field:display field="name" id="s_com_dormitory_domain_LeaseAgreement_name" object="${leaseagreement}" z="WhIzPIDfRweTR9FHUQehRY2x+d0="/>
+        <field:display field="phone" id="s_com_dormitory_domain_LeaseAgreement_phone" object="${leaseagreement}" z="tvoANIsZY/EtBSOSrz7fzTI5mmg="/>
+        <field:display date="true" dateTimePattern="${leaseAgreement_days_date_format}" field="days" id="s_com_dormitory_domain_LeaseAgreement_Days" object="${leaseagreement}" z="fYo5EDuMWsLGUQQt8KfkOR+FzT4="/>
+        <field:display field="age" id="s_com_dormitory_domain_LeaseAgreement_age" object="${leaseagreement}" z="uwMG+8QxZCrZctecfkXtn8zzHPw="/>
+        <field:display field="roomnumber" id="s_com_dormitory_domain_LeaseAgreement_roomnumber" object="${leaseagreement}" z="95HTeMRmm3OHJrR5fZvgewH5aQQ="/>
+    </page:show>
+</div>

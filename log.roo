@@ -81,3 +81,16 @@ web mvc all --package ~.web
 web mvc finder all
 exit
 // Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2559-12-29 20:50:12
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2559-12-29 21:18:38
+entity jpa --class ~.domain.LeaseAgreement
+field reference --fieldName name --type ~.domain.Customer
+field string --fieldName phone --notNull --sizeMin 2
+field date --fieldName Days --type java.util.Date
+field number --fieldName age --type java.lang.Integer
+field reference --fieldName roomnumber --type ~.domain.Room
+finder list
+finder add findLeaseAgreementsByRoomnumber
+web mvc all --package com.dormitory.web
+web mvc finder add --class com.dormitory.web.LeaseAgreementController --formBackingType com.dormitory.domain.LeaseAgreement
+quit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2559-12-29 21:21:19

@@ -6,6 +6,7 @@ package com.dormitory.web;
 import com.domitory.domain.Maintenances;
 import com.dormitory.domain.Customer;
 import com.dormitory.domain.DurableArticles;
+import com.dormitory.domain.LeaseAgreement;
 import com.dormitory.domain.Maintenance;
 import com.dormitory.domain.Payment;
 import com.dormitory.domain.RentDurableArticles;
@@ -89,6 +90,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.DurableArticles>() {
             public com.dormitory.domain.DurableArticles convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), DurableArticles.class);
+            }
+        };
+    }
+    
+    public Converter<LeaseAgreement, String> ApplicationConversionServiceFactoryBean.getLeaseAgreementToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.LeaseAgreement, java.lang.String>() {
+            public String convert(LeaseAgreement leaseAgreement) {
+                return new StringBuilder().append(leaseAgreement.getPhone()).append(' ').append(leaseAgreement.getDays()).append(' ').append(leaseAgreement.getAge()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, LeaseAgreement> ApplicationConversionServiceFactoryBean.getIdToLeaseAgreementConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.LeaseAgreement>() {
+            public com.dormitory.domain.LeaseAgreement convert(java.lang.Long id) {
+                return LeaseAgreement.findLeaseAgreement(id);
+            }
+        };
+    }
+    
+    public Converter<String, LeaseAgreement> ApplicationConversionServiceFactoryBean.getStringToLeaseAgreementConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.LeaseAgreement>() {
+            public com.dormitory.domain.LeaseAgreement convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), LeaseAgreement.class);
             }
         };
     }
@@ -247,6 +272,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getDurableArticlesToStringConverter());
         registry.addConverter(getIdToDurableArticlesConverter());
         registry.addConverter(getStringToDurableArticlesConverter());
+        registry.addConverter(getLeaseAgreementToStringConverter());
+        registry.addConverter(getIdToLeaseAgreementConverter());
+        registry.addConverter(getStringToLeaseAgreementConverter());
         registry.addConverter(getMaintenanceToStringConverter());
         registry.addConverter(getIdToMaintenanceConverter());
         registry.addConverter(getStringToMaintenanceConverter());
