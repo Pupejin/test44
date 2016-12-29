@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_dormitory_domain_Reservation" items="${reservations}" z="TNfa49ZsbVpXQYYiMsHYwVbP4YY=">
+        <table:table data="${reservations}" id="l_com_dormitory_domain_Reservation" path="/reservations" z="y6XDtpz/kY3DbKbAq4LtRUlpep8=">
+            <table:column id="c_com_dormitory_domain_Reservation_name" property="name" z="JGdJGSkUNglQiDllroDufn3imFk="/>
+            <table:column id="c_com_dormitory_domain_Reservation_phone" property="phone" z="sezWR2NIDSYUQGWMmtjM1nxkijw="/>
+            <table:column id="c_com_dormitory_domain_Reservation_email" property="email" z="Fdki6UAJZl1OZSPcDF1RGnzGB0U="/>
+            <table:column id="c_com_dormitory_domain_Reservation_room" property="room" z="wOWAcP4wTNXLkCJECKpONxzVVGA="/>
+            <table:column id="c_com_dormitory_domain_Reservation_durableArticles" property="durableArticles" z="3DKEkEWBRL4EUojjXCgBB1u+Jek="/>
+        </table:table>
+    </page:list>
+</div>

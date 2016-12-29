@@ -1,5 +1,28 @@
-<div id="menu" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-	<jsp:directive.page contentType="text/html;charset=UTF-8" />
-	<jsp:output omit-xml-declaration="yes"/>
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_reservation" z="QOKmLQs8mRLEvu7n5roIvJzPgHc=">
+            <menu:item id="i_reservation_new" messageCode="global_menu_new" url="/reservations?form" z="VN+vNiuOsWM9mc3+Pnfd51o3YUc="/>
+            <menu:item id="i_reservation_list" messageCode="global_menu_list" url="/reservations?page=1&amp;size=${empty param.size ? 10 : param.size}" z="6zE/15aHij6RKEydLc48wX5Bg80="/>
+        </menu:category>
+        <menu:category id="c_durablearticles" z="NNs5NTX9rGzch+jZbgH12/g3MNU=">
+            <menu:item id="i_durablearticles_new" messageCode="global_menu_new" url="/durablearticleses?form" z="jLshUdGYyzUn5/zYhvvkGxU2tEg="/>
+            <menu:item id="i_durablearticles_list" messageCode="global_menu_list" url="/durablearticleses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="OnxgMU963qGnh6GtVaVp63Wdj+s="/>
+        </menu:category>
+        <menu:category id="c_room" z="e3e6qTdks0EVUaGbVSSNbM0HcXc=">
+            <menu:item id="i_room_new" messageCode="global_menu_new" url="/rooms?form" z="fvAkKg908k/4/1ftKfhIuAeNmjE="/>
+            <menu:item id="i_room_list" messageCode="global_menu_list" url="/rooms?page=1&amp;size=${empty param.size ? 10 : param.size}" z="M5XFOS8myAtDzhNTcTwqAph0QtQ="/>
+            <menu:item id="fi_room_status" messageCode="global_menu_find" url="/rooms?find=ByStatus&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="iT+/rtHP5GwL9s/70MH3GYUc0Nc="/>
+        </menu:category>
+        <menu:category id="c_customer" z="Wa+bVSiDyYo/wX1nGU1B/z+OKhE=">
+            <menu:item id="i_customer_new" messageCode="global_menu_new" url="/customers?form" z="d9+YIotZHp6KZLGKwwnMVzPvh8k="/>
+            <menu:item id="i_customer_list" messageCode="global_menu_list" url="/customers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Yo9cUtyc7EUvbxwQ7EoeqXWaVJM="/>
+        </menu:category>
+        <menu:category id="c_roomtype" z="Y/+UDmgtAjw+Ac2Rp2rDwAjkE78=">
+            <menu:item id="i_roomtype_new" messageCode="global_menu_new" url="/roomtypes?form" z="4qtE0IN/50xkY2NoUmhONG3LthU="/>
+            <menu:item id="i_roomtype_list" messageCode="global_menu_list" url="/roomtypes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="I0scyAa1pmjxbJm6+JNKvoSDzw8="/>
+        </menu:category>
+    </menu:menu>
 </div>

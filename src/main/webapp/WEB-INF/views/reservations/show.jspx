@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_dormitory_domain_Reservation" object="${reservation}" path="/reservations" z="pDJPXFkFqbOfDJx2E10HBJWNZsM=">
+        <field:display field="name" id="s_com_dormitory_domain_Reservation_name" object="${reservation}" z="i0q4xKNqoN/gO1KX5PdAa35B6i0="/>
+        <field:display field="phone" id="s_com_dormitory_domain_Reservation_phone" object="${reservation}" z="aJO0hXfM6JpYlJN51l9hMr70VO0="/>
+        <field:display field="email" id="s_com_dormitory_domain_Reservation_email" object="${reservation}" z="VR2kAvQSmSgPQW2vTW6QvVXPkXw="/>
+        <field:display field="room" id="s_com_dormitory_domain_Reservation_room" object="${reservation}" z="8CdppbhJ/+nDDTGpyNq1k2PByG0="/>
+        <field:display field="durableArticles" id="s_com_dormitory_domain_Reservation_durableArticles" object="${reservation}" z="i58L6lNq4cgp0qOSgyKKZUA2wYU="/>
+    </page:show>
+</div>
