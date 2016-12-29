@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_dormitory_domain_RentDurableArticles" items="${rentdurablearticleses}" z="0nRZUzrbED54ZYjQkl7ZLrpnlm8=">
+        <table:table data="${rentdurablearticleses}" id="l_com_dormitory_domain_RentDurableArticles" path="/rentdurablearticleses" z="QLZleKqb1kBkphaGsDlHVLIaZOE=">
+            <table:column id="c_com_dormitory_domain_RentDurableArticles_name" property="name" z="N5J+QXb7OC/Tx4ixUmcmPOFYZ0M="/>
+            <table:column id="c_com_dormitory_domain_RentDurableArticles_phonenumber" property="phonenumber" z="nXE5ZoEO2Qgrtd2VWlDfZ/NaW18="/>
+            <table:column id="c_com_dormitory_domain_RentDurableArticles_email" property="email" z="o9pSKKu2XWCl232E2mKoRe/hWy8="/>
+            <table:column date="true" dateTimePattern="${rentDurableArticles_durablearticlesdate_date_format}" id="c_com_dormitory_domain_RentDurableArticles_DurableArticlesDate" property="durableArticlesDate" z="Usm87vO8BE4z2LcNixLZqjgNdxc="/>
+            <table:column id="c_com_dormitory_domain_RentDurableArticles_roomnumber" property="roomnumber" z="sVUXcXSU3VrXN7wdgAfKAweUcws="/>
+            <table:column id="c_com_dormitory_domain_RentDurableArticles_DurableArticles" property="durableArticles" z="UGEgTzJY6YiDfO03ecMoDp9IGOw="/>
+        </table:table>
+    </page:list>
+</div>

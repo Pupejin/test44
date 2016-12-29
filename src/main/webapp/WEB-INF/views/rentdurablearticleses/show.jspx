@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_dormitory_domain_RentDurableArticles" object="${rentdurablearticles}" path="/rentdurablearticleses" z="kSbiBNK4QBwLS0OYpNm9C9a3JuM=">
+        <field:display field="name" id="s_com_dormitory_domain_RentDurableArticles_name" object="${rentdurablearticles}" z="T+NhF7h6/pgoBXuqIm9cvzpC5ps="/>
+        <field:display field="phonenumber" id="s_com_dormitory_domain_RentDurableArticles_phonenumber" object="${rentdurablearticles}" z="235423Lw/XmCwglfSohDpFdt9h0="/>
+        <field:display field="email" id="s_com_dormitory_domain_RentDurableArticles_email" object="${rentdurablearticles}" z="Fo+cMH+Fj5q+SfkTq1w4J4HT+TQ="/>
+        <field:display date="true" dateTimePattern="${rentDurableArticles_durablearticlesdate_date_format}" field="durableArticlesDate" id="s_com_dormitory_domain_RentDurableArticles_DurableArticlesDate" object="${rentdurablearticles}" z="EhE9EWo53f+T2XW+qO1NcE8nZvk="/>
+        <field:display field="roomnumber" id="s_com_dormitory_domain_RentDurableArticles_roomnumber" object="${rentdurablearticles}" z="Ob7jEF5ug/RLoFcHdVGDIkLjCQw="/>
+        <field:display field="durableArticles" id="s_com_dormitory_domain_RentDurableArticles_DurableArticles" object="${rentdurablearticles}" z="1nI0kEKdFnvX60dcNM/MC5vn0g0="/>
+    </page:show>
+</div>

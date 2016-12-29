@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_dormitory_domain_RentDurableArticles" modelAttribute="rentDurableArticles" path="/rentdurablearticleses" versionField="Version" z="YU7xSJ43lxAEx1bhQcM3VmVyOJg=">
+        <field:input field="name" id="c_com_dormitory_domain_RentDurableArticles_name" min="2" required="true" z="vMC4gNEkehWUdXG7nJUWVxDhU3o="/>
+        <field:input field="phonenumber" id="c_com_dormitory_domain_RentDurableArticles_phonenumber" min="2" required="true" z="1mhQzhFb43i4bp7WK9awHdTQzQg="/>
+        <field:input field="email" id="c_com_dormitory_domain_RentDurableArticles_email" min="2" required="true" validationMessageCode="field_invalid_email" z="QO0TECFWVK1WOQdOLSWMeOKItNE="/>
+        <field:datetime dateTimePattern="${rentDurableArticles_durablearticlesdate_date_format}" field="DurableArticlesDate" id="c_com_dormitory_domain_RentDurableArticles_DurableArticlesDate" z="YYuCx8NIDWZVUOgjEGAshppHecI="/>
+        <field:select field="roomnumber" id="c_com_dormitory_domain_RentDurableArticles_roomnumber" itemValue="id" items="${rooms}" path="/rooms" z="BoXmAax6AsIuZil4B1Q/CjhwKDI="/>
+        <field:select field="DurableArticles" id="c_com_dormitory_domain_RentDurableArticles_DurableArticles" itemValue="id" items="${durablearticleses}" multiple="true" path="/durablearticleses" z="p7/Iq6OrBPcgbCbDee/+aG2lD0c="/>
+    </form:update>
+</div>
