@@ -7,6 +7,7 @@ import com.domitory.domain.Maintenances;
 import com.dormitory.domain.Customer;
 import com.dormitory.domain.DurableArticles;
 import com.dormitory.domain.Maintenance;
+import com.dormitory.domain.Payment;
 import com.dormitory.domain.RentDurableArticles;
 import com.dormitory.domain.Reservation;
 import com.dormitory.domain.Room;
@@ -112,6 +113,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.Maintenance>() {
             public com.dormitory.domain.Maintenance convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), Maintenance.class);
+            }
+        };
+    }
+    
+    public Converter<Payment, String> ApplicationConversionServiceFactoryBean.getPaymentToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.Payment, java.lang.String>() {
+            public String convert(Payment payment) {
+                return new StringBuilder().append(payment.getPrice()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Payment> ApplicationConversionServiceFactoryBean.getIdToPaymentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.Payment>() {
+            public com.dormitory.domain.Payment convert(java.lang.Long id) {
+                return Payment.findPayment(id);
+            }
+        };
+    }
+    
+    public Converter<String, Payment> ApplicationConversionServiceFactoryBean.getStringToPaymentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.Payment>() {
+            public com.dormitory.domain.Payment convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Payment.class);
             }
         };
     }
@@ -225,6 +250,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getMaintenanceToStringConverter());
         registry.addConverter(getIdToMaintenanceConverter());
         registry.addConverter(getStringToMaintenanceConverter());
+        registry.addConverter(getPaymentToStringConverter());
+        registry.addConverter(getIdToPaymentConverter());
+        registry.addConverter(getStringToPaymentConverter());
         registry.addConverter(getRentDurableArticlesToStringConverter());
         registry.addConverter(getIdToRentDurableArticlesConverter());
         registry.addConverter(getStringToRentDurableArticlesConverter());

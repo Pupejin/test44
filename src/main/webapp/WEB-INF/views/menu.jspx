@@ -38,5 +38,10 @@
             <menu:item id="i_rentdurablearticles_list" messageCode="global_menu_list" url="/rentdurablearticleses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="SZEtHhhhgQQj/zh1vo+CLUZPO1Q="/>
             <menu:item id="fi_rentdurablearticles_nameequals" messageCode="global_menu_find" url="/rentdurablearticleses?find=ByNameEquals&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="FWs5j+HWP5j2ndRteroGrVT03ew="/>
         </menu:category>
+        <menu:category id="c_payment" z="KXvP3nk7swdtwqF1yirxi8G+72w=">
+            <menu:item id="i_payment_new" messageCode="global_menu_new" url="/payments?form" z="MsWgEk8mPOMZsZrpSmZ4EEiRzKQ="/>
+            <menu:item id="i_payment_list" messageCode="global_menu_list" url="/payments?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Z3RAJMV3OotiyNAbiUB5cNixuyY="/>
+            <menu:item id="fi_payment_name" messageCode="global_menu_find" url="/payments?find=ByName&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="992ge3PXGO6/VYhTun5B4REzAnw="/>
+        </menu:category>
     </menu:menu>
 </div>
