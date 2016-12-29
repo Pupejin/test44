@@ -33,5 +33,10 @@
             <menu:item id="i_maintenances_new" messageCode="global_menu_new" url="/maintenanceses?form" z="bzJas1HQkrMa2wt2es4CRPfanC8="/>
             <menu:item id="i_maintenances_list" messageCode="global_menu_list" url="/maintenanceses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="oN3KM3B6oqq65LcEu6P6JaOk6IQ="/>
         </menu:category>
+        <menu:category id="c_rentdurablearticles" z="Wlk+0bPikS3yAr20jgeo6FFUqbQ=">
+            <menu:item id="i_rentdurablearticles_new" messageCode="global_menu_new" url="/rentdurablearticleses?form" z="og88LcPSfbQCYIUA6KnDyfijRyE="/>
+            <menu:item id="i_rentdurablearticles_list" messageCode="global_menu_list" url="/rentdurablearticleses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="SZEtHhhhgQQj/zh1vo+CLUZPO1Q="/>
+            <menu:item id="fi_rentdurablearticles_nameequals" messageCode="global_menu_find" url="/rentdurablearticleses?find=ByNameEquals&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="FWs5j+HWP5j2ndRteroGrVT03ew="/>
+        </menu:category>
     </menu:menu>
 </div>

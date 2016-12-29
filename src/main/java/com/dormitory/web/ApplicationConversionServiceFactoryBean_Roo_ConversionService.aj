@@ -7,6 +7,7 @@ import com.domitory.domain.Maintenances;
 import com.dormitory.domain.Customer;
 import com.dormitory.domain.DurableArticles;
 import com.dormitory.domain.Maintenance;
+import com.dormitory.domain.RentDurableArticles;
 import com.dormitory.domain.Reservation;
 import com.dormitory.domain.Room;
 import com.dormitory.domain.Roomtype;
@@ -115,6 +116,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<RentDurableArticles, String> ApplicationConversionServiceFactoryBean.getRentDurableArticlesToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.RentDurableArticles, java.lang.String>() {
+            public String convert(RentDurableArticles rentDurableArticles) {
+                return new StringBuilder().append(rentDurableArticles.getName()).append(' ').append(rentDurableArticles.getPhonenumber()).append(' ').append(rentDurableArticles.getEmail()).append(' ').append(rentDurableArticles.getDurableArticlesDate()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, RentDurableArticles> ApplicationConversionServiceFactoryBean.getIdToRentDurableArticlesConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.RentDurableArticles>() {
+            public com.dormitory.domain.RentDurableArticles convert(java.lang.Long id) {
+                return RentDurableArticles.findRentDurableArticles(id);
+            }
+        };
+    }
+    
+    public Converter<String, RentDurableArticles> ApplicationConversionServiceFactoryBean.getStringToRentDurableArticlesConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.RentDurableArticles>() {
+            public com.dormitory.domain.RentDurableArticles convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), RentDurableArticles.class);
+            }
+        };
+    }
+    
     public Converter<Reservation, String> ApplicationConversionServiceFactoryBean.getReservationToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.Reservation, java.lang.String>() {
             public String convert(Reservation reservation) {
@@ -200,6 +225,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getMaintenanceToStringConverter());
         registry.addConverter(getIdToMaintenanceConverter());
         registry.addConverter(getStringToMaintenanceConverter());
+        registry.addConverter(getRentDurableArticlesToStringConverter());
+        registry.addConverter(getIdToRentDurableArticlesConverter());
+        registry.addConverter(getStringToRentDurableArticlesConverter());
         registry.addConverter(getReservationToStringConverter());
         registry.addConverter(getIdToReservationConverter());
         registry.addConverter(getStringToReservationConverter());
