@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_dormitory_domain_Maintenance" object="${maintenance}" path="/maintenances" z="ClP0/hZHVNIRZyMMC3TvXmktFzk=">
+        <field:display date="true" dateTimePattern="${maintenance_maintenancedate_date_format}" field="maintenanceDate" id="s_com_dormitory_domain_Maintenance_maintenanceDate" object="${maintenance}" z="bsKDRP+R/Y7VVMqpMhYndY+a9MA="/>
+        <field:display field="roomNumber" id="s_com_dormitory_domain_Maintenance_roomNumber" object="${maintenance}" z="paTNzeHGE4F6AWCkziR0QzKgMpo="/>
+        <field:display field="name" id="s_com_dormitory_domain_Maintenance_name" object="${maintenance}" z="THk+BahoBXHUuonFGsAvhuxMYs4="/>
+        <field:display field="phone" id="s_com_dormitory_domain_Maintenance_phone" object="${maintenance}" z="6Mwfg5cb7mF92S3O4oNeWy6KLCc="/>
+        <field:display field="nameDurableArticles" id="s_com_dormitory_domain_Maintenance_nameDurableArticles" object="${maintenance}" z="vE81UPnsW8hxoCIuUjplUHj9SqU="/>
+    </page:show>
+</div>

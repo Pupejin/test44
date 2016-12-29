@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_domitory_domain_Maintenances" items="${maintenanceses}" z="RVSmmLoLNlbP/Z0KUkcoANZ+sd8=">
+        <table:table data="${maintenanceses}" id="l_com_domitory_domain_Maintenances" path="/maintenanceses" z="Q10le8z/TfXLazbT5V6wjQbLL70=">
+            <table:column date="true" dateTimePattern="${maintenances_maintenancedate_date_format}" id="c_com_domitory_domain_Maintenances_maintenanceDate" property="maintenanceDate" z="Cwp92wBOR+q55vwlRXIUwKvC8Fs="/>
+            <table:column id="c_com_domitory_domain_Maintenances_phone" property="phone" z="OTj994hA9KbzrqD/iFDlxko644A="/>
+            <table:column id="c_com_domitory_domain_Maintenances_symptomsDamaged" property="symptomsDamaged" z="l1MJSszfyoIgOeYwKn4D5Qnr78c="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_dormitory_domain_Maintenance" items="${maintenances}" z="rntJGPYxLnvnmvUyXDovwbdLc2A=">
+        <table:table data="${maintenances}" id="l_com_dormitory_domain_Maintenance" path="/maintenances" z="pMthndwru+wnQ+Z4SLMNkkkToP4=">
+            <table:column date="true" dateTimePattern="${maintenance_maintenancedate_date_format}" id="c_com_dormitory_domain_Maintenance_maintenanceDate" property="maintenanceDate" z="gkwxm2FF5vksAEka3ba4urRGkbE="/>
+            <table:column id="c_com_dormitory_domain_Maintenance_roomNumber" property="roomNumber" z="+UUYBuQCuz6gr5yARB0h4rMwzcE="/>
+            <table:column id="c_com_dormitory_domain_Maintenance_name" property="name" z="AjoM0Vgx/Vne9Uy/TiHakaU53/I="/>
+            <table:column id="c_com_dormitory_domain_Maintenance_phone" property="phone" z="I4YYBu0xT3g01RmxpxmqZWGl3WA="/>
+            <table:column id="c_com_dormitory_domain_Maintenance_nameDurableArticles" property="nameDurableArticles" z="q9jMQ8WWictxs/wOXtnsHGE1IHI="/>
+        </table:table>
+    </page:list>
+</div>
