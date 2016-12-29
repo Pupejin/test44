@@ -5,3 +5,31 @@ web mvc setup
 web mvc all --package com.dormitory.web
 quit
 // Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-12-29 18:20:28
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-12-29 18:24:56
+entity jpa --class ~.domain.Customer
+field string --fieldName name --notNull
+entity jpa --class ~.domain.Roomtype
+field string --fieldName type --notNull
+enum type --class ~.domain.RoomStatus
+enum constant --name empty
+enum constant --name unempty
+entity jpa --class ~.domain.Room
+field string --fieldName roomNumber --notNull
+field reference --fieldName roomType --type ~.domain.Roomtype
+field enum --fieldName status --type ~.domain.RoomStatus
+entity jpa --class ~.domain.DurableArticles
+field string --fieldName name --notNull
+entity jpa --class ~.domain.Reservation
+field reference --fieldName name --type ~.domain.Customer
+field string --fieldName phone --sizeMax 10
+field string --fieldName email 
+field set --fieldName room --type ~.domain.Room
+field set --fieldName durableArticles --type ~.domain.DurableArticles
+focus --class ~.domain.Room
+finder list 
+finder add --finderName findRoomsByStatus
+web mvc finder all
+web mvc all --package ~.web
+web mvc finder all
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-12-29 18:29:47
