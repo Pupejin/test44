@@ -48,5 +48,18 @@
             <menu:item id="i_leaseagreement_list" messageCode="global_menu_list" url="/leaseagreements?page=1&amp;size=${empty param.size ? 10 : param.size}" z="6CkE9qQQyL7JCAWOGpy0Q4e7kvs="/>
             <menu:item id="fi_leaseagreement_roomnumber" messageCode="global_menu_find" url="/leaseagreements?find=ByRoomnumber&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="eSJfKVIf+6yRQLxsIBJlKhRM1Z4="/>
         </menu:category>
+        <menu:category id="c_type" z="+yqCePpt/F49ZWiFGkoydgkDQ5M=">
+            <menu:item id="i_type_new" messageCode="global_menu_new" url="/types?form" z="+j5IPiozzM2i3pdeYlCtbYLl1EI="/>
+            <menu:item id="i_type_list" messageCode="global_menu_list" url="/types?page=1&amp;size=${empty param.size ? 10 : param.size}" z="41OvG76FSBdkBS6GuWQQ8H3SVQ4="/>
+        </menu:category>
+        <menu:category id="c_inform" z="VseHQbIoDR931YBA8W2zFL4RKlQ=">
+            <menu:item id="i_inform_new" messageCode="global_menu_new" url="/informs?form" z="q0W0GOGvmyXfJU7STKzN4NZiwQI="/>
+            <menu:item id="i_inform_list" messageCode="global_menu_list" url="/informs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="xs3EPg6N+rsikC16CGqPEmq1P54="/>
+            <menu:item id="fi_inform_typeandcolor" messageCode="global_menu_find" url="/informs?find=ByTypeAndColor&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="Lw+SwAouPAcTdyBdjiz9Rot5UWg="/>
+        </menu:category>
+        <menu:category id="c_color" z="0SMMDBBRxlb3qc4UcZUiEPSXY0s=">
+            <menu:item id="i_color_new" messageCode="global_menu_new" url="/colors?form" z="K66FCEtpkaVsKD0J0KpnyU6fxRU="/>
+            <menu:item id="i_color_list" messageCode="global_menu_list" url="/colors?page=1&amp;size=${empty param.size ? 10 : param.size}" z="X9IgSqEaG8/kPEaOCbE3HTeXfMU="/>
+        </menu:category>
     </menu:menu>
 </div>
