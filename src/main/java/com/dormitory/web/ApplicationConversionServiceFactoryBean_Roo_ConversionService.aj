@@ -3,8 +3,10 @@
 
 package com.dormitory.web;
 
+import com.domitory.domain.Maintenances;
 import com.dormitory.domain.Customer;
 import com.dormitory.domain.DurableArticles;
+import com.dormitory.domain.Maintenance;
 import com.dormitory.domain.Reservation;
 import com.dormitory.domain.Room;
 import com.dormitory.domain.Roomtype;
@@ -16,6 +18,30 @@ import org.springframework.format.FormatterRegistry;
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
     
     declare @type: ApplicationConversionServiceFactoryBean: @Configurable;
+    
+    public Converter<Maintenances, String> ApplicationConversionServiceFactoryBean.getMaintenancesToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.domitory.domain.Maintenances, java.lang.String>() {
+            public String convert(Maintenances maintenances) {
+                return new StringBuilder().append(maintenances.getMaintenanceDate()).append(' ').append(maintenances.getPhone()).append(' ').append(maintenances.getSymptomsDamaged()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Maintenances> ApplicationConversionServiceFactoryBean.getIdToMaintenancesConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.domitory.domain.Maintenances>() {
+            public com.domitory.domain.Maintenances convert(java.lang.Long id) {
+                return Maintenances.findMaintenances(id);
+            }
+        };
+    }
+    
+    public Converter<String, Maintenances> ApplicationConversionServiceFactoryBean.getStringToMaintenancesConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.domitory.domain.Maintenances>() {
+            public com.domitory.domain.Maintenances convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Maintenances.class);
+            }
+        };
+    }
     
     public Converter<Customer, String> ApplicationConversionServiceFactoryBean.getCustomerToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.Customer, java.lang.String>() {
@@ -61,6 +87,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.DurableArticles>() {
             public com.dormitory.domain.DurableArticles convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), DurableArticles.class);
+            }
+        };
+    }
+    
+    public Converter<Maintenance, String> ApplicationConversionServiceFactoryBean.getMaintenanceToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.Maintenance, java.lang.String>() {
+            public String convert(Maintenance maintenance) {
+                return new StringBuilder().append(maintenance.getMaintenanceDate()).append(' ').append(maintenance.getPhone()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Maintenance> ApplicationConversionServiceFactoryBean.getIdToMaintenanceConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.Maintenance>() {
+            public com.dormitory.domain.Maintenance convert(java.lang.Long id) {
+                return Maintenance.findMaintenance(id);
+            }
+        };
+    }
+    
+    public Converter<String, Maintenance> ApplicationConversionServiceFactoryBean.getStringToMaintenanceConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.Maintenance>() {
+            public com.dormitory.domain.Maintenance convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Maintenance.class);
             }
         };
     }
@@ -138,12 +188,18 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     }
     
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
+        registry.addConverter(getMaintenancesToStringConverter());
+        registry.addConverter(getIdToMaintenancesConverter());
+        registry.addConverter(getStringToMaintenancesConverter());
         registry.addConverter(getCustomerToStringConverter());
         registry.addConverter(getIdToCustomerConverter());
         registry.addConverter(getStringToCustomerConverter());
         registry.addConverter(getDurableArticlesToStringConverter());
         registry.addConverter(getIdToDurableArticlesConverter());
         registry.addConverter(getStringToDurableArticlesConverter());
+        registry.addConverter(getMaintenanceToStringConverter());
+        registry.addConverter(getIdToMaintenanceConverter());
+        registry.addConverter(getStringToMaintenanceConverter());
         registry.addConverter(getReservationToStringConverter());
         registry.addConverter(getIdToReservationConverter());
         registry.addConverter(getStringToReservationConverter());

@@ -24,5 +24,14 @@
             <menu:item id="i_roomtype_new" messageCode="global_menu_new" url="/roomtypes?form" z="4qtE0IN/50xkY2NoUmhONG3LthU="/>
             <menu:item id="i_roomtype_list" messageCode="global_menu_list" url="/roomtypes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="I0scyAa1pmjxbJm6+JNKvoSDzw8="/>
         </menu:category>
+        <menu:category id="c_maintenance" z="Ig8hAD987e6bLqLCmLRqmvSi0KU=">
+            <menu:item id="i_maintenance_new" messageCode="global_menu_new" url="/maintenances?form" z="1zaIa9O5BMeLpNt9HBlPW84hNGU="/>
+            <menu:item id="i_maintenance_list" messageCode="global_menu_list" url="/maintenances?page=1&amp;size=${empty param.size ? 10 : param.size}" z="K1HheDDt3cM5tIwRlGhuVVpLmBk="/>
+            <menu:item id="fi_maintenance_nameequals" messageCode="global_menu_find" url="/maintenances?find=ByNameEquals&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="j7/j9NLoWkYC46b7fdcD38hL2Ck="/>
+        </menu:category>
+        <menu:category id="c_maintenances" z="4/8Ngz3VS6s4zYwuk+WfS7Kvdz4=">
+            <menu:item id="i_maintenances_new" messageCode="global_menu_new" url="/maintenanceses?form" z="bzJas1HQkrMa2wt2es4CRPfanC8="/>
+            <menu:item id="i_maintenances_list" messageCode="global_menu_list" url="/maintenanceses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="oN3KM3B6oqq65LcEu6P6JaOk6IQ="/>
+        </menu:category>
     </menu:menu>
 </div>
