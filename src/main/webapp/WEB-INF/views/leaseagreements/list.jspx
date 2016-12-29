@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_dormitory_domain_LeaseAgreement" items="${leaseagreements}" z="xsf/GtqJaLuJeQI187KR4cUdv0U=">
+        <table:table data="${leaseagreements}" id="l_com_dormitory_domain_LeaseAgreement" path="/leaseagreements" z="tGpWH5fqu3yEHg9vqfkXHE5qoxM=">
+            <table:column id="c_com_dormitory_domain_LeaseAgreement_name" property="name" z="xpBBtjVHDmQebXrB3xAHwOo6xAI="/>
+            <table:column id="c_com_dormitory_domain_LeaseAgreement_phone" property="phone" z="9o7AnsaAQXY5ehNBSVHu7brpdcw="/>
+            <table:column date="true" dateTimePattern="${leaseAgreement_days_date_format}" id="c_com_dormitory_domain_LeaseAgreement_Days" property="days" z="hlvPkr4kQTCp6jqfh9Yw2HTyu20="/>
+            <table:column id="c_com_dormitory_domain_LeaseAgreement_age" property="age" z="GWnAu8rNfv0VYl1cq9o2K/V5hvQ="/>
+            <table:column id="c_com_dormitory_domain_LeaseAgreement_roomnumber" property="roomnumber" z="/gumE2+nZdDGrPlWwIGemFSuMOE="/>
+        </table:table>
+    </page:list>
+</div>

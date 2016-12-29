@@ -43,5 +43,10 @@
             <menu:item id="i_payment_list" messageCode="global_menu_list" url="/payments?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Z3RAJMV3OotiyNAbiUB5cNixuyY="/>
             <menu:item id="fi_payment_name" messageCode="global_menu_find" url="/payments?find=ByName&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="992ge3PXGO6/VYhTun5B4REzAnw="/>
         </menu:category>
+        <menu:category id="c_leaseagreement" z="uRlUeyyIZHHSI4JCPMYUcniQr4o=">
+            <menu:item id="i_leaseagreement_new" messageCode="global_menu_new" url="/leaseagreements?form" z="SeGZxTjvYWil4IHYp1p5ma5NUU8="/>
+            <menu:item id="i_leaseagreement_list" messageCode="global_menu_list" url="/leaseagreements?page=1&amp;size=${empty param.size ? 10 : param.size}" z="6CkE9qQQyL7JCAWOGpy0Q4e7kvs="/>
+            <menu:item id="fi_leaseagreement_roomnumber" messageCode="global_menu_find" url="/leaseagreements?find=ByRoomnumber&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="eSJfKVIf+6yRQLxsIBJlKhRM1Z4="/>
+        </menu:category>
     </menu:menu>
 </div>
