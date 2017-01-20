@@ -24,13 +24,16 @@ public class FitnessService {
 
     /**
      */
-    @NotNull
-    @Size(min = 2)
-    private String age;
+    private Float age;
 
     /**
      */
     @NotNull
     @Size(max = 10)
     private String phone;
+
+    /**
+     */
+    @ManyToOne
+    private PackageName fitness_package;
 }

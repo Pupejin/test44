@@ -7,5 +7,6 @@
         <field:display field="sex" id="s_com_dormitory_domain_FitnessService_sex" object="${fitnessservice}" z="xvP+S1fyp5FwFxg6IXuXXBwMDMw="/>
         <field:display field="age" id="s_com_dormitory_domain_FitnessService_age" object="${fitnessservice}" z="07xjkyy3JghLqaALFXeVfpMfZXQ="/>
         <field:display field="phone" id="s_com_dormitory_domain_FitnessService_phone" object="${fitnessservice}" z="aV4lECvhleAc59mZboKbBOxxKlU="/>
+        <field:display field="fitness_package" id="s_com_dormitory_domain_FitnessService_fitness_package" object="${fitnessservice}" z="kvQ9e4qZmu1bM1/zzI5CgAfBJ1Y="/>
     </page:show>
 </div>
