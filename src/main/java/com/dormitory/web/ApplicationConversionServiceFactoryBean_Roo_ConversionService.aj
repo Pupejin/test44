@@ -7,6 +7,7 @@ import com.domitory.domain.Maintenances;
 import com.dormitory.domain.Color;
 import com.dormitory.domain.Customer;
 import com.dormitory.domain.DurableArticles;
+import com.dormitory.domain.Fine;
 import com.dormitory.domain.FitnessPackages;
 import com.dormitory.domain.FitnessService;
 import com.dormitory.domain.Inform;
@@ -122,6 +123,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.DurableArticles>() {
             public com.dormitory.domain.DurableArticles convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), DurableArticles.class);
+            }
+        };
+    }
+    
+    public Converter<Fine, String> ApplicationConversionServiceFactoryBean.getFineToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.Fine, java.lang.String>() {
+            public String convert(Fine fine) {
+                return new StringBuilder().append(fine.getNote()).append(' ').append(fine.getTotalPrice()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Fine> ApplicationConversionServiceFactoryBean.getIdToFineConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.Fine>() {
+            public com.dormitory.domain.Fine convert(java.lang.Long id) {
+                return Fine.findFine(id);
+            }
+        };
+    }
+    
+    public Converter<String, Fine> ApplicationConversionServiceFactoryBean.getStringToFineConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.Fine>() {
+            public com.dormitory.domain.Fine convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Fine.class);
             }
         };
     }
@@ -475,6 +500,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getDurableArticlesToStringConverter());
         registry.addConverter(getIdToDurableArticlesConverter());
         registry.addConverter(getStringToDurableArticlesConverter());
+        registry.addConverter(getFineToStringConverter());
+        registry.addConverter(getIdToFineConverter());
+        registry.addConverter(getStringToFineConverter());
         registry.addConverter(getFitnessPackagesToStringConverter());
         registry.addConverter(getIdToFitnessPackagesConverter());
         registry.addConverter(getStringToFitnessPackagesConverter());

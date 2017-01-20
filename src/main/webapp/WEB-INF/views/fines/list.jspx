@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_dormitory_domain_Fine" items="${fines}" z="sFUpIE1UHpoFUYbAiGHH2sMlYsA=">
+        <table:table data="${fines}" id="l_com_dormitory_domain_Fine" path="/fines" z="1Ybu8+9dWmJKLb9wVNjwhG+EWBE=">
+            <table:column id="c_com_dormitory_domain_Fine_Room" property="room" z="J6+OMjzrYpalULVFY2PzQ+PQ8cA="/>
+            <table:column id="c_com_dormitory_domain_Fine_DurableArticles" property="durableArticles" z="VLrihbTWnFFBoIM7Z5745TnVGD4="/>
+            <table:column id="c_com_dormitory_domain_Fine_Note" property="note" z="+bGebH9Z8XxJke57UkMNGCBYOZk="/>
+            <table:column id="c_com_dormitory_domain_Fine_TotalPrice" property="totalPrice" z="TiQJqLueOKBqe3tQ0/32G4YIYUA="/>
+        </table:table>
+    </page:list>
+</div>

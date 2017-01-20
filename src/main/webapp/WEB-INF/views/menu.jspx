@@ -83,5 +83,9 @@
             <menu:item id="i_receiveparcelpost_list" messageCode="global_menu_list" url="/receiveparcelposts?page=1&amp;size=${empty param.size ? 10 : param.size}" z="/RNZ9/rSAaAToiCFAq/B3Oc05fw="/>
             <menu:item id="fi_receiveparcelpost_trackequals" messageCode="global_menu_find" url="/receiveparcelposts?find=ByTrackEquals&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="bjgtO5/+ZLdphum3ElgqGuzjOe4="/>
         </menu:category>
+        <menu:category id="c_fine" z="ijG7AunIcAS2KhXpuBNdqu/cYME=">
+            <menu:item id="i_fine_new" messageCode="global_menu_new" url="/fines?form" z="TYlaWrXTp/44k7SwIrhIFjeUxtg="/>
+            <menu:item id="i_fine_list" messageCode="global_menu_list" url="/fines?page=1&amp;size=${empty param.size ? 10 : param.size}" z="amcR1C9LoI6/Ta0Xw5LRJGpCT68="/>
+        </menu:category>
     </menu:menu>
 </div>

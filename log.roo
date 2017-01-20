@@ -176,3 +176,12 @@ quit
 web mvc finder add --class ~.web.ReceiveParcelPostController --formBackingType ~.domain.ReceiveParcelPost
 quit
 // Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2560-01-20 18:27:15
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-01-20 19:00:44
+entity jpa --class ~.domain.Fine
+field reference --fieldName Room --type ~.domain.Room
+field set --fieldName DurableArticles --type ~.domain.DurableArticles
+field string --fieldName Note --sizeMin 2 --sizeMax 200
+field number --fieldName TotalPrice --type java.lang.Float
+web mvc all --package ~.web
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2017-01-20 19:03:24
