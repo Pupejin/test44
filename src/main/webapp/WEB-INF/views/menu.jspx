@@ -87,5 +87,9 @@
             <menu:item id="i_fine_new" messageCode="global_menu_new" url="/fines?form" z="TYlaWrXTp/44k7SwIrhIFjeUxtg="/>
             <menu:item id="i_fine_list" messageCode="global_menu_list" url="/fines?page=1&amp;size=${empty param.size ? 10 : param.size}" z="amcR1C9LoI6/Ta0Xw5LRJGpCT68="/>
         </menu:category>
+        <menu:category id="c_changeroom" z="hU9uvJG0Z6fqQFHs3c6DLiKF1kU=">
+            <menu:item id="i_changeroom_new" messageCode="global_menu_new" url="/changerooms?form" z="1YLRhRW9bojKbeq3DtWpvZlcrHE="/>
+            <menu:item id="i_changeroom_list" messageCode="global_menu_list" url="/changerooms?page=1&amp;size=${empty param.size ? 10 : param.size}" z="L8a+g3Fyy6U5y1zF2aNqlP5UjHc="/>
+        </menu:category>
     </menu:menu>
 </div>
