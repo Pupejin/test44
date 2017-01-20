@@ -7,14 +7,18 @@ import com.domitory.domain.Maintenances;
 import com.dormitory.domain.Color;
 import com.dormitory.domain.Customer;
 import com.dormitory.domain.DurableArticles;
+import com.dormitory.domain.FitnessPackages;
+import com.dormitory.domain.FitnessService;
 import com.dormitory.domain.Inform;
 import com.dormitory.domain.LeaseAgreement;
 import com.dormitory.domain.Maintenance;
+import com.dormitory.domain.PackageName;
 import com.dormitory.domain.Payment;
 import com.dormitory.domain.RentDurableArticles;
 import com.dormitory.domain.Reservation;
 import com.dormitory.domain.Room;
 import com.dormitory.domain.Roomtype;
+import com.dormitory.domain.Trainer;
 import com.dormitory.domain.Type;
 import com.dormitory.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
@@ -121,6 +125,54 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<FitnessPackages, String> ApplicationConversionServiceFactoryBean.getFitnessPackagesToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.FitnessPackages, java.lang.String>() {
+            public String convert(FitnessPackages fitnessPackages) {
+                return new StringBuilder().append(fitnessPackages.getDuration()).append(' ').append(fitnessPackages.getPrice()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, FitnessPackages> ApplicationConversionServiceFactoryBean.getIdToFitnessPackagesConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.FitnessPackages>() {
+            public com.dormitory.domain.FitnessPackages convert(java.lang.Long id) {
+                return FitnessPackages.findFitnessPackages(id);
+            }
+        };
+    }
+    
+    public Converter<String, FitnessPackages> ApplicationConversionServiceFactoryBean.getStringToFitnessPackagesConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.FitnessPackages>() {
+            public com.dormitory.domain.FitnessPackages convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), FitnessPackages.class);
+            }
+        };
+    }
+    
+    public Converter<FitnessService, String> ApplicationConversionServiceFactoryBean.getFitnessServiceToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.FitnessService, java.lang.String>() {
+            public String convert(FitnessService fitnessService) {
+                return new StringBuilder().append(fitnessService.getSex()).append(' ').append(fitnessService.getAge()).append(' ').append(fitnessService.getPhone()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, FitnessService> ApplicationConversionServiceFactoryBean.getIdToFitnessServiceConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.FitnessService>() {
+            public com.dormitory.domain.FitnessService convert(java.lang.Long id) {
+                return FitnessService.findFitnessService(id);
+            }
+        };
+    }
+    
+    public Converter<String, FitnessService> ApplicationConversionServiceFactoryBean.getStringToFitnessServiceConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.FitnessService>() {
+            public com.dormitory.domain.FitnessService convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), FitnessService.class);
+            }
+        };
+    }
+    
     public Converter<Inform, String> ApplicationConversionServiceFactoryBean.getInformToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.Inform, java.lang.String>() {
             public String convert(Inform inform) {
@@ -189,6 +241,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.Maintenance>() {
             public com.dormitory.domain.Maintenance convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), Maintenance.class);
+            }
+        };
+    }
+    
+    public Converter<PackageName, String> ApplicationConversionServiceFactoryBean.getPackageNameToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.PackageName, java.lang.String>() {
+            public String convert(PackageName packageName) {
+                return new StringBuilder().append(packageName.getPackage_name()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, PackageName> ApplicationConversionServiceFactoryBean.getIdToPackageNameConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.PackageName>() {
+            public com.dormitory.domain.PackageName convert(java.lang.Long id) {
+                return PackageName.findPackageName(id);
+            }
+        };
+    }
+    
+    public Converter<String, PackageName> ApplicationConversionServiceFactoryBean.getStringToPackageNameConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.PackageName>() {
+            public com.dormitory.domain.PackageName convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), PackageName.class);
             }
         };
     }
@@ -313,6 +389,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Trainer, String> ApplicationConversionServiceFactoryBean.getTrainerToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.Trainer, java.lang.String>() {
+            public String convert(Trainer trainer) {
+                return new StringBuilder().append(trainer.getName()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Trainer> ApplicationConversionServiceFactoryBean.getIdToTrainerConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.Trainer>() {
+            public com.dormitory.domain.Trainer convert(java.lang.Long id) {
+                return Trainer.findTrainer(id);
+            }
+        };
+    }
+    
+    public Converter<String, Trainer> ApplicationConversionServiceFactoryBean.getStringToTrainerConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.Trainer>() {
+            public com.dormitory.domain.Trainer convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Trainer.class);
+            }
+        };
+    }
+    
     public Converter<Type, String> ApplicationConversionServiceFactoryBean.getTypeToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.Type, java.lang.String>() {
             public String convert(Type type) {
@@ -350,6 +450,12 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getDurableArticlesToStringConverter());
         registry.addConverter(getIdToDurableArticlesConverter());
         registry.addConverter(getStringToDurableArticlesConverter());
+        registry.addConverter(getFitnessPackagesToStringConverter());
+        registry.addConverter(getIdToFitnessPackagesConverter());
+        registry.addConverter(getStringToFitnessPackagesConverter());
+        registry.addConverter(getFitnessServiceToStringConverter());
+        registry.addConverter(getIdToFitnessServiceConverter());
+        registry.addConverter(getStringToFitnessServiceConverter());
         registry.addConverter(getInformToStringConverter());
         registry.addConverter(getIdToInformConverter());
         registry.addConverter(getStringToInformConverter());
@@ -359,6 +465,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getMaintenanceToStringConverter());
         registry.addConverter(getIdToMaintenanceConverter());
         registry.addConverter(getStringToMaintenanceConverter());
+        registry.addConverter(getPackageNameToStringConverter());
+        registry.addConverter(getIdToPackageNameConverter());
+        registry.addConverter(getStringToPackageNameConverter());
         registry.addConverter(getPaymentToStringConverter());
         registry.addConverter(getIdToPaymentConverter());
         registry.addConverter(getStringToPaymentConverter());
@@ -374,6 +483,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getRoomtypeToStringConverter());
         registry.addConverter(getIdToRoomtypeConverter());
         registry.addConverter(getStringToRoomtypeConverter());
+        registry.addConverter(getTrainerToStringConverter());
+        registry.addConverter(getIdToTrainerConverter());
+        registry.addConverter(getStringToTrainerConverter());
         registry.addConverter(getTypeToStringConverter());
         registry.addConverter(getIdToTypeConverter());
         registry.addConverter(getStringToTypeConverter());

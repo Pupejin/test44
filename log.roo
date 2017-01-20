@@ -112,3 +112,25 @@ web mvc all --package com.dormitory.web
 web mvc finder add --class com.dormitory.web.InformController --formBackingType com.dormitory.domain.Inform
 quit
 // Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-12-29 21:35:34
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-01-20 17:00:08
+entity jpa --class ~.domain.Trainer
+field string --fieldName name --notNull  --sizeMin 2
+entity jpa --class ~.domain.PackageName
+field string --fieldName package_name --notNull  --sizeMin 2
+entity jpa --class ~.domain.FitnessPackages
+field reference --fieldName package_name --type ~.domain.PackageName
+field string --fieldName duration --notNull --sizeMin 2
+field reference --fieldName trainer --type ~.domain.Trainer
+field number --fieldName price --type java.lang.Float
+entity jpa --class ~.domain.FitnessService
+field reference --fieldName name --type ~.domain.Customer
+field string --fieldName sex --notNull --sizeMin 2
+field string --fieldName age --notNull --sizeMin 2
+field string --fieldName phone --notNull --sizeMax 10
+field reference --fieldName fitness_package --type ~.domain.PackageName
+finder list
+finder add findFitnessServicesByName
+web mvc all --package ~.web
+web mvc finder add --class com.dormitory.web.FitnessServiceController --formBackingType com.dormitory.domain.FitnessService
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2017-01-20 17:02:06

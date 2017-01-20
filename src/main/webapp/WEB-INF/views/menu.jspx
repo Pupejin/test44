@@ -61,5 +61,22 @@
             <menu:item id="i_color_new" messageCode="global_menu_new" url="/colors?form" z="K66FCEtpkaVsKD0J0KpnyU6fxRU="/>
             <menu:item id="i_color_list" messageCode="global_menu_list" url="/colors?page=1&amp;size=${empty param.size ? 10 : param.size}" z="X9IgSqEaG8/kPEaOCbE3HTeXfMU="/>
         </menu:category>
+        <menu:category id="c_trainer" z="Un1XhyqcB6XG99+2rY+jQIpgSL4=">
+            <menu:item id="i_trainer_new" messageCode="global_menu_new" url="/trainers?form" z="DoOltAdx+MEY2oym0PuWO232YjE="/>
+            <menu:item id="i_trainer_list" messageCode="global_menu_list" url="/trainers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="aPBWwu+5u1uM+B5H4YJEZ92Sy7k="/>
+        </menu:category>
+        <menu:category id="c_fitnesspackages" z="OC30i6Oshx8lAoee4zSxiKePgw0=">
+            <menu:item id="i_fitnesspackages_new" messageCode="global_menu_new" url="/fitnesspackageses?form" z="upGlKRlZdQzFvrSm2q0e43YHjIo="/>
+            <menu:item id="i_fitnesspackages_list" messageCode="global_menu_list" url="/fitnesspackageses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Y0sLFF2oiU0lVECm5PtecLUXRnY="/>
+        </menu:category>
+        <menu:category id="c_packagename" z="XQpI/0h+55Sq+UIeqca7drMX/o0=">
+            <menu:item id="i_packagename_new" messageCode="global_menu_new" url="/packagenames?form" z="MoEQiVINezjFjWfVkcc70AcRRvs="/>
+            <menu:item id="i_packagename_list" messageCode="global_menu_list" url="/packagenames?page=1&amp;size=${empty param.size ? 10 : param.size}" z="yTqCU1WLgCXfX6DWQdTbDKTAFjo="/>
+        </menu:category>
+        <menu:category id="c_fitnessservice" z="cp6XMBZVufqR0wMOi+fP/gNx+Ak=">
+            <menu:item id="i_fitnessservice_new" messageCode="global_menu_new" url="/fitnessservices?form" z="S37d6d3ESzyZio69ksV4Fxhma5c="/>
+            <menu:item id="i_fitnessservice_list" messageCode="global_menu_list" url="/fitnessservices?page=1&amp;size=${empty param.size ? 10 : param.size}" z="u8CaJ6BK+hVc1ZfkzYpiwDSkGVk="/>
+            <menu:item id="fi_fitnessservice_name" messageCode="global_menu_find" url="/fitnessservices?find=ByName&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="cu9sdMX2VEoSnbV/csbLqhYUS5M="/>
+        </menu:category>
     </menu:menu>
 </div>

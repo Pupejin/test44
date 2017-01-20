@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_dormitory_domain_FitnessPackages" object="${fitnesspackages}" path="/fitnesspackageses" z="qp/EKjLeMmCBDDok7dVLYedueFc=">
+        <field:display field="package_name" id="s_com_dormitory_domain_FitnessPackages_package_name" object="${fitnesspackages}" z="3PmY7f+W3jzn7r5yoGSoduonI8Q="/>
+        <field:display field="duration" id="s_com_dormitory_domain_FitnessPackages_duration" object="${fitnesspackages}" z="6Kk078yZCOgYlahIdDmsoALnyYU="/>
+        <field:display field="trainer" id="s_com_dormitory_domain_FitnessPackages_trainer" object="${fitnesspackages}" z="HlG2aXe/a9DfHJWuL1TeH80rimo="/>
+        <field:display field="price" id="s_com_dormitory_domain_FitnessPackages_price" object="${fitnesspackages}" z="QkdX+H+f/UOFx+IGxHu2IMBptVw="/>
+    </page:show>
+</div>

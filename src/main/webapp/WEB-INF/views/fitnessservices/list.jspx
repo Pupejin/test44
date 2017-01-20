@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_dormitory_domain_FitnessService" items="${fitnessservices}" z="snaUfwywb5xtpy9Xmk6fGeQ4k/A=">
+        <table:table data="${fitnessservices}" id="l_com_dormitory_domain_FitnessService" path="/fitnessservices" z="W3OUoYcW8+kpOgTQHVRzhaa8VBI=">
+            <table:column id="c_com_dormitory_domain_FitnessService_name" property="name" z="29APNhaiCOBp0VeckOJIuSlJz0E="/>
+            <table:column id="c_com_dormitory_domain_FitnessService_sex" property="sex" z="FTlxED1pJ8K8PcRdLwT3XgCBVJg="/>
+            <table:column id="c_com_dormitory_domain_FitnessService_age" property="age" z="Fb2EGr2lL3ctPwnvxmxQtcmvSOU="/>
+            <table:column id="c_com_dormitory_domain_FitnessService_phone" property="phone" z="iqohIMy3q5D3IbvgspqAVJqDRcU="/>
+            <table:column id="c_com_dormitory_domain_FitnessService_fitness_package" property="fitness_package" z="wnlNjvL//K5Ia06c/H0J8I9I2V0="/>
+        </table:table>
+    </page:list>
+</div>

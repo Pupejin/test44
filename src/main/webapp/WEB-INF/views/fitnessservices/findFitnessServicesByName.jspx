@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByName" id="ff_com_dormitory_domain_FitnessService" path="/fitnessservices" z="nccWWr5H5NjKmBWbdmp9i5FKiNc=">
+        <field:select disableFormBinding="true" field="name" id="f_com_dormitory_domain_FitnessService_name" itemValue="id" items="${customers}" path="/customers" required="true" z="dR7vbha+ICAFHyySCFAHL8fm1V4="/>
+    </form:find>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_dormitory_domain_FitnessPackages" modelAttribute="fitnessPackages" path="/fitnesspackageses" render="${empty dependencies}" z="BfK5Y0pYa+p0tXQqiUfldedQTx8=">
+        <field:select field="package_name" id="c_com_dormitory_domain_FitnessPackages_package_name" itemValue="id" items="${packagenames}" path="/packagenames" z="1qlHn4ycytsmCt/ieUS0NyO8UIk="/>
+        <field:input field="duration" id="c_com_dormitory_domain_FitnessPackages_duration" min="2" required="true" z="anajwZGbvqGL1IsyFbYv9BIN/2Y="/>
+        <field:select field="trainer" id="c_com_dormitory_domain_FitnessPackages_trainer" itemValue="id" items="${trainers}" path="/trainers" z="nJmA9L8+PYaJIOuMzDv0E1/3qxE="/>
+        <field:input field="price" id="c_com_dormitory_domain_FitnessPackages_price" validationMessageCode="field_invalid_number" z="6ZjU6gU+dpr2QFBcfItwOo2ASTM="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_dormitory_domain_FitnessPackages" render="${not empty dependencies}" z="qx4Y48RiSoO1Enbh0myZ8BqL10c="/>
+</div>

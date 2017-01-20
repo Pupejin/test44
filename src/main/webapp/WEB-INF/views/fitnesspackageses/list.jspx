@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_dormitory_domain_FitnessPackages" items="${fitnesspackageses}" z="qqUoMNwq18/vrvB9vfVHCrv6Dxo=">
+        <table:table data="${fitnesspackageses}" id="l_com_dormitory_domain_FitnessPackages" path="/fitnesspackageses" z="1SgWmXzbkc+GMT/jU6FCO5xAMQs=">
+            <table:column id="c_com_dormitory_domain_FitnessPackages_package_name" property="package_name" z="DT1WtD10dXlxW0hXOtmMRA/cDbk="/>
+            <table:column id="c_com_dormitory_domain_FitnessPackages_duration" property="duration" z="iNpRaLBqVUaP1Ao4D8/NRr9iKSo="/>
+            <table:column id="c_com_dormitory_domain_FitnessPackages_trainer" property="trainer" z="rW3briSicFu8SBST/U5FSn5IBWI="/>
+            <table:column id="c_com_dormitory_domain_FitnessPackages_price" property="price" z="z4cmCGV8+zdeIXxrMQayEYTy9+g="/>
+        </table:table>
+    </page:list>
+</div>
