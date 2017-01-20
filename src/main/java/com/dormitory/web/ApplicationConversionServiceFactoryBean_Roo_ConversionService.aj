@@ -14,6 +14,7 @@ import com.dormitory.domain.LeaseAgreement;
 import com.dormitory.domain.Maintenance;
 import com.dormitory.domain.PackageName;
 import com.dormitory.domain.Payment;
+import com.dormitory.domain.ReceiveParcelPost;
 import com.dormitory.domain.RentDurableArticles;
 import com.dormitory.domain.Reservation;
 import com.dormitory.domain.Room;
@@ -293,6 +294,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<ReceiveParcelPost, String> ApplicationConversionServiceFactoryBean.getReceiveParcelPostToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.ReceiveParcelPost, java.lang.String>() {
+            public String convert(ReceiveParcelPost receiveParcelPost) {
+                return new StringBuilder().append(receiveParcelPost.getReceiveParcelPostDate()).append(' ').append(receiveParcelPost.getTrack()).append(' ').append(receiveParcelPost.getPhone()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, ReceiveParcelPost> ApplicationConversionServiceFactoryBean.getIdToReceiveParcelPostConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.ReceiveParcelPost>() {
+            public com.dormitory.domain.ReceiveParcelPost convert(java.lang.Long id) {
+                return ReceiveParcelPost.findReceiveParcelPost(id);
+            }
+        };
+    }
+    
+    public Converter<String, ReceiveParcelPost> ApplicationConversionServiceFactoryBean.getStringToReceiveParcelPostConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.ReceiveParcelPost>() {
+            public com.dormitory.domain.ReceiveParcelPost convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), ReceiveParcelPost.class);
+            }
+        };
+    }
+    
     public Converter<RentDurableArticles, String> ApplicationConversionServiceFactoryBean.getRentDurableArticlesToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.RentDurableArticles, java.lang.String>() {
             public String convert(RentDurableArticles rentDurableArticles) {
@@ -471,6 +496,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getPaymentToStringConverter());
         registry.addConverter(getIdToPaymentConverter());
         registry.addConverter(getStringToPaymentConverter());
+        registry.addConverter(getReceiveParcelPostToStringConverter());
+        registry.addConverter(getIdToReceiveParcelPostConverter());
+        registry.addConverter(getStringToReceiveParcelPostConverter());
         registry.addConverter(getRentDurableArticlesToStringConverter());
         registry.addConverter(getIdToRentDurableArticlesConverter());
         registry.addConverter(getStringToRentDurableArticlesConverter());
