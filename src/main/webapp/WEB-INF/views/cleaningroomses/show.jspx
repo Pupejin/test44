@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_dormitory_domain_CleaningRooms" object="${cleaningrooms}" path="/cleaningroomses" z="9CVqRWn5lIcgiFOC/8CC13YL7ak=">
+        <field:display field="name" id="s_com_dormitory_domain_CleaningRooms_name" object="${cleaningrooms}" z="Pej0TuYAOVZbewzeDgcRyhKcZeM="/>
+        <field:display field="phone" id="s_com_dormitory_domain_CleaningRooms_Phone" object="${cleaningrooms}" z="+9OYjXUKaBajlZzHEHRsNTgARvQ="/>
+        <field:display date="true" dateTimePattern="${cleaningRooms_cleandate_date_format}" field="cleanDate" id="s_com_dormitory_domain_CleaningRooms_CleanDate" object="${cleaningrooms}" z="pJkvlJ6Ubwbk6RE0cCWRicZj4nw="/>
+        <field:display field="roomnumber" id="s_com_dormitory_domain_CleaningRooms_Roomnumber" object="${cleaningrooms}" z="pxy05uSIJbE6jrvxLFiBGpAPBt8="/>
+    </page:show>
+</div>

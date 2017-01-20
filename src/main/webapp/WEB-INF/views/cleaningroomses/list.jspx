@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_dormitory_domain_CleaningRooms" items="${cleaningroomses}" z="5Iv9+MKjKW0gnhlbw/B7eodBYGk=">
+        <table:table data="${cleaningroomses}" id="l_com_dormitory_domain_CleaningRooms" path="/cleaningroomses" z="V6LS5tT2XriVhbcMMcS8bO/9uJQ=">
+            <table:column id="c_com_dormitory_domain_CleaningRooms_name" property="name" z="Z9PUjk3rSeBuHCWP66V5i4Nmj+o="/>
+            <table:column id="c_com_dormitory_domain_CleaningRooms_Phone" property="phone" z="BDmi1PkKGz6qEmm+D0PfBEEWaE4="/>
+            <table:column date="true" dateTimePattern="${cleaningRooms_cleandate_date_format}" id="c_com_dormitory_domain_CleaningRooms_CleanDate" property="cleanDate" z="rhzDTX5KzAkVfme+FC78wlwi8ww="/>
+            <table:column id="c_com_dormitory_domain_CleaningRooms_Roomnumber" property="roomnumber" z="N2zY0iL8Rccx4yfKqv6lR7ru/Sc="/>
+        </table:table>
+    </page:list>
+</div>

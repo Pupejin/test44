@@ -91,5 +91,10 @@
             <menu:item id="i_changeroom_new" messageCode="global_menu_new" url="/changerooms?form" z="1YLRhRW9bojKbeq3DtWpvZlcrHE="/>
             <menu:item id="i_changeroom_list" messageCode="global_menu_list" url="/changerooms?page=1&amp;size=${empty param.size ? 10 : param.size}" z="L8a+g3Fyy6U5y1zF2aNqlP5UjHc="/>
         </menu:category>
+        <menu:category id="c_cleaningrooms" z="SW1+/wWaooIxspROYVqzEYLZpK0=">
+            <menu:item id="i_cleaningrooms_new" messageCode="global_menu_new" url="/cleaningroomses?form" z="elSEJHLj7WOn0UVpRT5jEwW6jPA="/>
+            <menu:item id="i_cleaningrooms_list" messageCode="global_menu_list" url="/cleaningroomses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="D6wv+3jcuih/HeFBA1zst3awSmo="/>
+            <menu:item id="fi_cleaningrooms_nameequals" messageCode="global_menu_find" url="/cleaningroomses?find=ByNameEquals&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="G0pUFAtI21b0DH0XiEu6jX6l6Pk="/>
+        </menu:category>
     </menu:menu>
 </div>
