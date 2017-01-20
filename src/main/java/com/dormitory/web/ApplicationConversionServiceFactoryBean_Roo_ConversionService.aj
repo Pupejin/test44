@@ -5,6 +5,7 @@ package com.dormitory.web;
 
 import com.domitory.domain.Maintenances;
 import com.dormitory.domain.ChangeRoom;
+import com.dormitory.domain.CleaningRooms;
 import com.dormitory.domain.Color;
 import com.dormitory.domain.Customer;
 import com.dormitory.domain.DurableArticles;
@@ -76,6 +77,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.ChangeRoom>() {
             public com.dormitory.domain.ChangeRoom convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), ChangeRoom.class);
+            }
+        };
+    }
+    
+    public Converter<CleaningRooms, String> ApplicationConversionServiceFactoryBean.getCleaningRoomsToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.CleaningRooms, java.lang.String>() {
+            public String convert(CleaningRooms cleaningRooms) {
+                return new StringBuilder().append(cleaningRooms.getPhone()).append(' ').append(cleaningRooms.getCleanDate()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, CleaningRooms> ApplicationConversionServiceFactoryBean.getIdToCleaningRoomsConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.CleaningRooms>() {
+            public com.dormitory.domain.CleaningRooms convert(java.lang.Long id) {
+                return CleaningRooms.findCleaningRooms(id);
+            }
+        };
+    }
+    
+    public Converter<String, CleaningRooms> ApplicationConversionServiceFactoryBean.getStringToCleaningRoomsConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.CleaningRooms>() {
+            public com.dormitory.domain.CleaningRooms convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), CleaningRooms.class);
             }
         };
     }
@@ -519,6 +544,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getChangeRoomToStringConverter());
         registry.addConverter(getIdToChangeRoomConverter());
         registry.addConverter(getStringToChangeRoomConverter());
+        registry.addConverter(getCleaningRoomsToStringConverter());
+        registry.addConverter(getIdToCleaningRoomsConverter());
+        registry.addConverter(getStringToCleaningRoomsConverter());
         registry.addConverter(getColorToStringConverter());
         registry.addConverter(getIdToColorConverter());
         registry.addConverter(getStringToColorConverter());
