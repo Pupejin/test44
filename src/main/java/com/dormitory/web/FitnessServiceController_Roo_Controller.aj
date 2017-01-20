@@ -5,7 +5,6 @@ package com.dormitory.web;
 
 import com.dormitory.domain.Customer;
 import com.dormitory.domain.FitnessService;
-import com.dormitory.domain.PackageName;
 import com.dormitory.web.FitnessServiceController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -89,7 +88,6 @@ privileged aspect FitnessServiceController_Roo_Controller {
     void FitnessServiceController.populateEditForm(Model uiModel, FitnessService fitnessService) {
         uiModel.addAttribute("fitnessService", fitnessService);
         uiModel.addAttribute("customers", Customer.findAllCustomers());
-        uiModel.addAttribute("packagenames", PackageName.findAllPackageNames());
     }
     
     String FitnessServiceController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

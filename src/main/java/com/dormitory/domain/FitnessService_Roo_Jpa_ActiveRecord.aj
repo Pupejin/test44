@@ -14,7 +14,7 @@ privileged aspect FitnessService_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager FitnessService.entityManager;
     
-    public static final List<String> FitnessService.fieldNames4OrderClauseFilter = java.util.Arrays.asList("name", "sex", "age", "phone", "fitness_package");
+    public static final List<String> FitnessService.fieldNames4OrderClauseFilter = java.util.Arrays.asList("name", "sex", "age", "phone");
     
     public static final EntityManager FitnessService.entityManager() {
         EntityManager em = new FitnessService().entityManager;

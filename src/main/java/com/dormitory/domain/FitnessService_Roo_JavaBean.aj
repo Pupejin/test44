@@ -5,7 +5,6 @@ package com.dormitory.domain;
 
 import com.dormitory.domain.Customer;
 import com.dormitory.domain.FitnessService;
-import com.dormitory.domain.PackageName;
 
 privileged aspect FitnessService_Roo_JavaBean {
     
@@ -39,14 +38,6 @@ privileged aspect FitnessService_Roo_JavaBean {
     
     public void FitnessService.setPhone(String phone) {
         this.phone = phone;
-    }
-    
-    public PackageName FitnessService.getFitness_package() {
-        return this.fitness_package;
-    }
-    
-    public void FitnessService.setFitness_package(PackageName fitness_package) {
-        this.fitness_package = fitness_package;
     }
     
 }
