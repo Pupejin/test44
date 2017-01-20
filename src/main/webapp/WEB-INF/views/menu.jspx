@@ -78,5 +78,10 @@
             <menu:item id="i_fitnessservice_list" messageCode="global_menu_list" url="/fitnessservices?page=1&amp;size=${empty param.size ? 10 : param.size}" z="u8CaJ6BK+hVc1ZfkzYpiwDSkGVk="/>
             <menu:item id="fi_fitnessservice_name" messageCode="global_menu_find" url="/fitnessservices?find=ByName&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="cu9sdMX2VEoSnbV/csbLqhYUS5M="/>
         </menu:category>
+        <menu:category id="c_receiveparcelpost" z="Rvu1zJsA/ZlLPwOc+kktK4Ts8kg=">
+            <menu:item id="i_receiveparcelpost_new" messageCode="global_menu_new" url="/receiveparcelposts?form" z="61K8Ye+xDIi1WYiMCeMEX23l2ok="/>
+            <menu:item id="i_receiveparcelpost_list" messageCode="global_menu_list" url="/receiveparcelposts?page=1&amp;size=${empty param.size ? 10 : param.size}" z="/RNZ9/rSAaAToiCFAq/B3Oc05fw="/>
+            <menu:item id="fi_receiveparcelpost_trackequals" messageCode="global_menu_find" url="/receiveparcelposts?find=ByTrackEquals&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="bjgtO5/+ZLdphum3ElgqGuzjOe4="/>
+        </menu:category>
     </menu:menu>
 </div>

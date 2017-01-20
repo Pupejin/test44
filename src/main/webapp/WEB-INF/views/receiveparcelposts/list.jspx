@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_dormitory_domain_ReceiveParcelPost" items="${receiveparcelposts}" z="2rDB+CX3p2VM1bppIw3SxQo6XFk=">
+        <table:table data="${receiveparcelposts}" id="l_com_dormitory_domain_ReceiveParcelPost" path="/receiveparcelposts" z="QlA9kWYk+atDtA6+j4WNNa380Jw=">
+            <table:column date="true" dateTimePattern="${receiveParcelPost_receiveparcelpostdate_date_format}" id="c_com_dormitory_domain_ReceiveParcelPost_receiveParcelPostDate" property="receiveParcelPostDate" z="IfvPtaCoiWIJdB744pH2blp6VM0="/>
+            <table:column id="c_com_dormitory_domain_ReceiveParcelPost_track" property="track" z="LSyun/7bC+h/Y4wE+DOa/4PRtPA="/>
+            <table:column id="c_com_dormitory_domain_ReceiveParcelPost_name" property="name" z="RIjjNQ0Em3MXxblSfBaM33PQS/g="/>
+            <table:column id="c_com_dormitory_domain_ReceiveParcelPost_roomNumber" property="roomNumber" z="5ihX8+Z/8Df86kZme4dYklnlbpQ="/>
+            <table:column id="c_com_dormitory_domain_ReceiveParcelPost_phone" property="phone" z="mF8/d/NqfDd00H3szVpw0Lapb3s="/>
+        </table:table>
+    </page:list>
+</div>

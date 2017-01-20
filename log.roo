@@ -153,3 +153,26 @@ field reference --fieldName fitness_package --type ~.domain.PackageName
 web mvc all --package ~.web
 exit
 // Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2017-01-20 17:44:26
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2560-01-20 18:08:03
+enum type --class ~.domain.RoomStatus
+enum constant --name empty 
+enum constant --name unempty
+// [failed] entity jpa --class ~.domain.Roomtype
+
+entity jpa --class ~.domain.ReceiveParcelPost
+field date --fieldName receiveParcelPostDate --type java.util.Date
+field string --fieldName track --notNull
+field reference --fieldName name --type ~.domain.customer
+
+field reference --fieldName roomNumber --type ~.domain.room
+field string --fieldName phone --notnull --sizeMax 10
+finder list
+finder add findReceiveParcelPostsByTrackEquals
+
+web mvc all --package ~.web 
+// [failed] web mvc finder add --class ~.web.ReceiveParcelPostController --formBackingType com.ice.domain.ReceiveParcelPost
+
+quit
+web mvc finder add --class ~.web.ReceiveParcelPostController --formBackingType ~.domain.ReceiveParcelPost
+quit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2560-01-20 18:27:15
