@@ -33,9 +33,4 @@ public class FitnessService {
     @NotNull
     @Size(max = 10)
     private String phone;
-
-    /**
-     */
-    @ManyToOne
-    private PackageName fitness_package;
 }

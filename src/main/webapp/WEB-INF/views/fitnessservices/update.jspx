@@ -7,6 +7,5 @@
         <field:input field="sex" id="c_com_dormitory_domain_FitnessService_sex" min="2" required="true" z="2u8jaFJZTz942grSCAef8myfRbw="/>
         <field:input field="age" id="c_com_dormitory_domain_FitnessService_age" min="2" required="true" z="xyCvvAo3Y8D5/5KHD51Gzeq1y2k="/>
         <field:input field="phone" id="c_com_dormitory_domain_FitnessService_phone" max="10" required="true" z="90VG5LygZIt1WvA3dgXfuXdH+sY="/>
-        <field:select field="fitness_package" id="c_com_dormitory_domain_FitnessService_fitness_package" itemValue="id" items="${packagenames}" path="/packagenames" z="z2ESvbVVPEEnCu1ZdORyesVONtU="/>
     </form:update>
 </div>
