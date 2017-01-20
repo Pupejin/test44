@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_dormitory_domain_ChangeRoom" items="${changerooms}" z="LWIG81d0AoVsYtnxFvOYi4DHabI=">
+        <table:table data="${changerooms}" id="l_com_dormitory_domain_ChangeRoom" path="/changerooms" z="vRUjacGK2aLOM/Ml7LYdJmHXyns=">
+            <table:column date="true" dateTimePattern="${changeRoom_datechang_date_format}" id="c_com_dormitory_domain_ChangeRoom_dateChang" property="dateChang" z="mI6d9Llsy7K2DZlSBouwGMdZYAw="/>
+            <table:column id="c_com_dormitory_domain_ChangeRoom_name" property="name" z="qodpA7WJ+Cr6SIO4o2eeYclzlCo="/>
+            <table:column id="c_com_dormitory_domain_ChangeRoom_Room" property="room" z="gQiU+LjCZNxzpQO5gPDJ5KIPF88="/>
+            <table:column id="c_com_dormitory_domain_ChangeRoom_NewRoom" property="newRoom" z="s+8GTh3Q6nlEXCHodoyv6CwDVBQ="/>
+        </table:table>
+    </page:list>
+</div>

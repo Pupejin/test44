@@ -4,6 +4,7 @@
 package com.dormitory.web;
 
 import com.domitory.domain.Maintenances;
+import com.dormitory.domain.ChangeRoom;
 import com.dormitory.domain.Color;
 import com.dormitory.domain.Customer;
 import com.dormitory.domain.DurableArticles;
@@ -51,6 +52,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.domitory.domain.Maintenances>() {
             public com.domitory.domain.Maintenances convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), Maintenances.class);
+            }
+        };
+    }
+    
+    public Converter<ChangeRoom, String> ApplicationConversionServiceFactoryBean.getChangeRoomToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.ChangeRoom, java.lang.String>() {
+            public String convert(ChangeRoom changeRoom) {
+                return new StringBuilder().append(changeRoom.getDateChang()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, ChangeRoom> ApplicationConversionServiceFactoryBean.getIdToChangeRoomConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.ChangeRoom>() {
+            public com.dormitory.domain.ChangeRoom convert(java.lang.Long id) {
+                return ChangeRoom.findChangeRoom(id);
+            }
+        };
+    }
+    
+    public Converter<String, ChangeRoom> ApplicationConversionServiceFactoryBean.getStringToChangeRoomConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.ChangeRoom>() {
+            public com.dormitory.domain.ChangeRoom convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), ChangeRoom.class);
             }
         };
     }
@@ -491,6 +516,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getMaintenancesToStringConverter());
         registry.addConverter(getIdToMaintenancesConverter());
         registry.addConverter(getStringToMaintenancesConverter());
+        registry.addConverter(getChangeRoomToStringConverter());
+        registry.addConverter(getIdToChangeRoomConverter());
+        registry.addConverter(getStringToChangeRoomConverter());
         registry.addConverter(getColorToStringConverter());
         registry.addConverter(getIdToColorConverter());
         registry.addConverter(getStringToColorConverter());
