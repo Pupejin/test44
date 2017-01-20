@@ -8,6 +8,7 @@
             <table:column id="c_com_dormitory_domain_FitnessService_sex" property="sex" z="FTlxED1pJ8K8PcRdLwT3XgCBVJg="/>
             <table:column id="c_com_dormitory_domain_FitnessService_age" property="age" z="Fb2EGr2lL3ctPwnvxmxQtcmvSOU="/>
             <table:column id="c_com_dormitory_domain_FitnessService_phone" property="phone" z="iqohIMy3q5D3IbvgspqAVJqDRcU="/>
+            <table:column id="c_com_dormitory_domain_FitnessService_fitness_package" property="fitness_package" z="wnlNjvL//K5Ia06c/H0J8I9I2V0="/>
         </table:table>
     </page:list>
 </div>
