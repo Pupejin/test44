@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_dormitory_domain_FoodService" items="${foodservices}" z="J+5WLTIuaSotouG4p9Qiawkva7Y=">
+        <table:table data="${foodservices}" id="l_com_dormitory_domain_FoodService" path="/foodservices" z="hTjQ3KlKyjMM9VWeH/o/ifMX4fI=">
+            <table:column id="c_com_dormitory_domain_FoodService_name" property="name" z="VPrkpN7dMa/UU/5FkUh36wqEuTM="/>
+            <table:column id="c_com_dormitory_domain_FoodService_roomnumber" property="roomnumber" z="T6TJUaCQiFBpWFYRWq3YnjsKi6Q="/>
+            <table:column id="c_com_dormitory_domain_FoodService_phone" property="phone" z="BnmH0/NVTVZOB30YWvtUE/h+mJQ="/>
+            <table:column date="true" dateTimePattern="${foodService_days_date_format}" id="c_com_dormitory_domain_FoodService_Days" property="days" z="5KBQtmWD6a8eSS6nPJHMWs+raww="/>
+            <table:column id="c_com_dormitory_domain_FoodService_Menu" property="menu" z="yhN3XwmUNiINqhnwD58SzrDR3zc="/>
+        </table:table>
+    </page:list>
+</div>

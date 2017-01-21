@@ -214,3 +214,24 @@ web mvc finder add --class ~.web.CleaningRoomsController --formBackingType ~.dom
 
 quit
 // Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2560-01-20 21:24:30
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2560-01-21 12:34:18
+entity jpa --class ~.domain.FoodService
+field reference --fieldName name --type ~.domain.Customer
+field reference --fieldName roomnumber --type ~.domain.Room
+
+field string --fieldName phone --notNull --sizeMin 2
+
+field date --fieldName Days --type java.util.Date
+
+field string --fieldName Menu --notNull --sizeMin 2
+
+finder list
+
+finder add findFoodServicesByRoomnumber
+
+web mvc all --package com.dormitory.web
+
+web mvc finder add --class com.dormitory.web.FoodServiceController --formBackingType com.dormitory.domain.FoodService
+
+quit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2560-01-21 12:40:11

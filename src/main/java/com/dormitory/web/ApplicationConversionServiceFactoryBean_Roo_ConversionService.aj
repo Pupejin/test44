@@ -12,6 +12,7 @@ import com.dormitory.domain.DurableArticles;
 import com.dormitory.domain.Fine;
 import com.dormitory.domain.FitnessPackages;
 import com.dormitory.domain.FitnessService;
+import com.dormitory.domain.FoodService;
 import com.dormitory.domain.Inform;
 import com.dormitory.domain.LeaseAgreement;
 import com.dormitory.domain.Maintenance;
@@ -245,6 +246,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.FitnessService>() {
             public com.dormitory.domain.FitnessService convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), FitnessService.class);
+            }
+        };
+    }
+    
+    public Converter<FoodService, String> ApplicationConversionServiceFactoryBean.getFoodServiceToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.dormitory.domain.FoodService, java.lang.String>() {
+            public String convert(FoodService foodService) {
+                return new StringBuilder().append(foodService.getPhone()).append(' ').append(foodService.getDays()).append(' ').append(foodService.getMenu()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, FoodService> ApplicationConversionServiceFactoryBean.getIdToFoodServiceConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.dormitory.domain.FoodService>() {
+            public com.dormitory.domain.FoodService convert(java.lang.Long id) {
+                return FoodService.findFoodService(id);
+            }
+        };
+    }
+    
+    public Converter<String, FoodService> ApplicationConversionServiceFactoryBean.getStringToFoodServiceConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.dormitory.domain.FoodService>() {
+            public com.dormitory.domain.FoodService convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), FoodService.class);
             }
         };
     }
@@ -565,6 +590,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getFitnessServiceToStringConverter());
         registry.addConverter(getIdToFitnessServiceConverter());
         registry.addConverter(getStringToFitnessServiceConverter());
+        registry.addConverter(getFoodServiceToStringConverter());
+        registry.addConverter(getIdToFoodServiceConverter());
+        registry.addConverter(getStringToFoodServiceConverter());
         registry.addConverter(getInformToStringConverter());
         registry.addConverter(getIdToInformConverter());
         registry.addConverter(getStringToInformConverter());

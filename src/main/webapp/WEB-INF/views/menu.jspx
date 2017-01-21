@@ -96,5 +96,10 @@
             <menu:item id="i_cleaningrooms_list" messageCode="global_menu_list" url="/cleaningroomses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="D6wv+3jcuih/HeFBA1zst3awSmo="/>
             <menu:item id="fi_cleaningrooms_nameequals" messageCode="global_menu_find" url="/cleaningroomses?find=ByNameEquals&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="G0pUFAtI21b0DH0XiEu6jX6l6Pk="/>
         </menu:category>
+        <menu:category id="c_foodservice" z="mh5IPaBpe0FBgaO+EJO1cSM3yc0=">
+            <menu:item id="i_foodservice_new" messageCode="global_menu_new" url="/foodservices?form" z="uqXIVbAynQx3tAWwABS1N8v6nLc="/>
+            <menu:item id="i_foodservice_list" messageCode="global_menu_list" url="/foodservices?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4kzfWYGNkFalD5eekvcV9UbWTvM="/>
+            <menu:item id="fi_foodservice_roomnumber" messageCode="global_menu_find" url="/foodservices?find=ByRoomnumber&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="2RauCXnPkgLzGppcr4hhvbiZ/eo="/>
+        </menu:category>
     </menu:menu>
 </div>
