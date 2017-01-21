@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="foodservices/list">
+        <put-attribute name="body" value="/WEB-INF/views/foodservices/list.jspx"/>
+    </definition>
+<definition extends="default" name="foodservices/show">
+        <put-attribute name="body" value="/WEB-INF/views/foodservices/show.jspx"/>
+    </definition>
+<definition extends="default" name="foodservices/create">
+        <put-attribute name="body" value="/WEB-INF/views/foodservices/create.jspx"/>
+    </definition>
+<definition extends="default" name="foodservices/update">
+        <put-attribute name="body" value="/WEB-INF/views/foodservices/update.jspx"/>
+    </definition>
+<definition extends="default" name="foodservices/findFoodServicesByRoomnumber">
+        <put-attribute name="body" value="/WEB-INF/views/foodservices/findFoodServicesByRoomnumber.jspx"/>
+    </definition>
+</tiles-definitions>
